@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$1" = "debug" ]; then
+    debug="debug"
+fi
+
+node $debug --trace-warnings solver.js
