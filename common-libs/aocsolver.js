@@ -48,6 +48,13 @@ const Parser = {
         }
     },
 
+    reduceLines: function(init, callback) {
+        return function() {
+            const lines = completeReadFile();
+            return lines.reduce(callback, init);
+        }
+    },
+
     allLines: function() {
         return completeReadFile();
     }
